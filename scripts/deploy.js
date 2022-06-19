@@ -6,15 +6,20 @@
 const hre = require("hardhat");
 
 async function main() {
+  // deploy one
   const factoryContract = await hre.ethers.getContractFactory("Inbox");
   const contract = await factoryContract.deploy("Hello, Hardhat!");
   await contract.deployed();
-
-  const factoryContractG = await hre.ethers.getContractFactory("Global_Functions");
+// deploy two
+  const factoryContractG = await hre.ethers.getContractFactory("GlobalFunctions");
   const contractG = await factoryContractG.deploy();
   await contractG.deployed();
 
+  // deploy three
 
+  const factoryContractKeccak = await hre.ethers.getContractFactory("Keccak");
+  const contractKeccak = await factoryContractKeccak.deploy();
+  await contractKeccak.deployed();
 
 }
 
