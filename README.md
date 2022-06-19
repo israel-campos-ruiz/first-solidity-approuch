@@ -12,3 +12,4 @@
 con esto y con las variables del paso anterior puedes tener una consola para poder 
 probar tus funciones similar a remix 
 
+![deploytest](https://user-images.githubusercontent.com/47333561/174470648-170611f0-2bdc-44a8-8bfa-ffb25de375a1.png)
