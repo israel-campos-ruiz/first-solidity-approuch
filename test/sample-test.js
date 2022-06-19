@@ -1,4 +1,4 @@
-const { expect } = require("chai");
+const { expect,  } = require("chai");
 const { ethers } = require("hardhat");
 
 describe("Greeter", function () {
@@ -16,6 +16,5 @@ describe("Greeter", function () {
     await contract.setMessage("hola mundo");
     const helloWorld = await contract.message();
     expect(helloWorld).to.equal("hola mundo");
-
   });
 });

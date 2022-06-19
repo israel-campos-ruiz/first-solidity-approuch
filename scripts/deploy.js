@@ -8,10 +8,14 @@ const hre = require("hardhat");
 async function main() {
   const factoryContract = await hre.ethers.getContractFactory("Inbox");
   const contract = await factoryContract.deploy("Hello, Hardhat!");
-
   await contract.deployed();
 
-  console.log("Greeter deployed to:", contract.message);
+  const factoryContractG = await hre.ethers.getContractFactory("Global_Functions");
+  const contractG = await factoryContractG.deploy();
+  await contractG.deployed();
+
+
+
 }
 
 main()
