@@ -5,7 +5,8 @@
 // Runtime Environment's members available in the global scope.
 const hre = require("hardhat");
 
-async function main() {
+const  main = async () => {
+  // TODO find a way to make this more simple and fast 
   // deploy one
   const factoryContract = await hre.ethers.getContractFactory("Inbox");
   const contract = await factoryContract.deploy("Hello, Hardhat!");
@@ -20,6 +21,12 @@ async function main() {
   const factoryContractKeccak = await hre.ethers.getContractFactory("Keccak");
   const contractKeccak = await factoryContractKeccak.deploy();
   await contractKeccak.deployed();
+  
+  // deploy Time Contract 
+  
+  const factoryContractTime = await hre.ethers.getContractFactory("Time");
+  const contractTime = await factoryContractTime.deploy();
+  await contractTime.deployed();
 
 }
 

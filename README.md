@@ -1,15 +1,24 @@
-# first-solidity-approuch
-## yarn hardhat node 
-# funciones básicas para el deploy, test y jugar con la consola de hardhat
+# Create a local hardhat network
 ``
- const contractFactory =  await ethers.getContractFactory("ContractName");
- const contract =  await contractFactory.deploy()
- console.log(contract.address) su dirección del deploy del contrato,  la cuál es necesaria cuando 
-  quieras hacer el deploy en una red de ethereum
+  yarn hardhat node
+``
+>this runs a local ethereum instance with hardhat this are open networks so you never use this to make a real transaction just to play in your local machine :heavy_check_mark:
+# Basics functions to make a deploy:
+``
+ yarn hardhat run <folder/fileToDeploy> --network <localhost or network-name>
+``
+# basic deploy on deploy.js
+``
+ const hre = require("hardhat");
+ const main = async () => {
+  const contractFactory =  await ethers.getContractFactory("ContractName");
+  const contract =  await contractFactory.deploy()
+  console.log(contract.address)
+ } 
 ``
 
 ## yarn hardhat console --network localhost
-con esto y con las variables del paso anterior puedes tener una consola para poder 
-probar tus funciones similar a remix 
-
+when you run this command, you can use your local network, but you need to code like the variables like the previous step.
 ![deploytest](https://user-images.githubusercontent.com/47333561/174470648-170611f0-2bdc-44a8-8bfa-ffb25de375a1.png)
+
+## hardhat config...
