@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
+pragma experimental ABIEncoderV2;
 
 contract Time {
     // instance variables
@@ -29,5 +30,14 @@ contract Time {
 
     function oneMoreWeek() public view returns(uint){
         return week + 1 weeks;
+    }
+
+    function compareStrings(string memory _firstString, string memory _secondString) public pure returns(bool) {
+        bytes32 firstHash = keccak256(abi.encodePacked(_firstString));
+        bytes32 secondHash = keccak256(abi.encodePacked(_secondString));
+        if(firstHash != secondHash ) {
+            return false;
+        }
+        return true;
     }
 }
