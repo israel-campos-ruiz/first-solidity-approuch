@@ -26,8 +26,11 @@ const  main = async () => {
   
   const factoryContractTime = await hre.ethers.getContractFactory("Time");
   const contractTime = await factoryContractTime.deploy();
-  await contractTime.deployed();
-
+  await contractTime.deployed();  
+  // deploy Time Contract 
+  const factoryContractMappings = await hre.ethers.getContractFactory("Mappings");
+  const contractMappings = await factoryContractMappings.deploy();
+  await contractMappings.deployed();
 }
 
 main()
