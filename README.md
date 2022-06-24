@@ -1,5 +1,5 @@
 # Metamask 
-Metamask isa wallet,, you can send, buyethereums tokens etc. You can take two flavors with this software
+Metamask is a wallet, you can send, buyethereums tokens etc. You can take two flavors with this software
 a extension of google chrome (or any other browser that works with chromium) or download the application
 you can now more of this in this link [metamask](https://metamask.io/) 
 
@@ -90,11 +90,6 @@ We have 20 accounts to test our apps and in the remote case you use all your eth
   console.log(contract.address)
  }
  ``
-
-
-then you can go to [ropsten.etherscan](https://ropsten.etherscan.io/) and see your deployment 
-you just need your address contract 
-
 
 
 ## yarn hardhat console --network localhost
