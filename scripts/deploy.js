@@ -11,6 +11,7 @@ const  main = async () => {
   const factoryContract = await hre.ethers.getContractFactory("Inbox");
   const contract = await factoryContract.deploy("Hello, Hardhat!");
   await contract.deployed();
+  console.log("contract", contract.address)
 // deploy two
   const factoryContractG = await hre.ethers.getContractFactory("GlobalFunctions");
   const contractG = await factoryContractG.deploy();
