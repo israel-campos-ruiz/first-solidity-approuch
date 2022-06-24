@@ -143,7 +143,7 @@ After you create your account and your project you can see a dashboard like this
  ``
  yarn hardhat run scripts/deploy.js --network ropsten
  ``
- 19  This show you a small message and give you a address
+ 19.  This show you a small message and give you a address
  20. Go to [ropsten etherscan](https://ropsten.etherscan.io/) and put the number in the searchbox 
  21. Now you can see your smart contract in the ropsten ethereum network
 
