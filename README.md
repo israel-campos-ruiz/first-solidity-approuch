@@ -108,5 +108,47 @@ this is very helpful because we can now  write multi lines of  js code in the co
 In this case we will use [infura](https://infura.io/)
 the first spet is create a count and create a proyect.
 
+![image](https://user-images.githubusercontent.com/47333561/175654916-482ced23-0268-42af-9d4c-5b09b76efb8e.png)
+After you create your account and your project you can see a dashboard like this
+![image](https://user-images.githubusercontent.com/47333561/175655150-8f1c0457-3fe7-47c3-be4d-1f8329796cd7.png)
 
-## hardhat config...
+### important parts of infura:
+- PROJECT SECRET
+- PROJECT ID
+- Endpoints
+- we want to deploy our contract to some network of ethereum so in this case we will deploy to ropsten ![image](https://user-images.githubusercontent.com/47333561/175655984-f2778711-1c95-4bc5-8b5b-513f179f6774.png)
+>you dont want to any one can see this things right? so we wanna import that in a variables env 
+
+## hardhat config
+>This is a huge file so in this moment we only see how to deploy our smart contract to ropsten 
+1. We have a hardhat.config.js file
+2. We need to make a module.exports this is the main script that we focus 
+3. ![image](https://user-images.githubusercontent.com/47333561/175656327-b37cab79-5ebb-4033-88b0-a46be634790b.png)
+4. We need to add our local network if we want
+5. ![image](https://user-images.githubusercontent.com/47333561/175656363-89108628-3e7c-45e7-bbef-6730292b902c.png)
+6. After that we can add our ropsten configuration
+7. ![image](https://user-images.githubusercontent.com/47333561/175656555-98d75945-c8d4-4d7f-a648-ca0dd7cd5de9.png)
+   >The "url", is the infura url that provide to us but the last segment you want to keep secrete so we pass to a env variable the "accounts" you must export from your metamask wallet so is SUPER IMPORTANT keep that save
+ 8. to know your account you need to go to your metamask wallet click in the three points, click "detalles de la cuenta"  
+ 9. ![image](https://user-images.githubusercontent.com/47333561/175657063-7c419c05-d6a5-4299-86b9-4d61358ad277.png)
+ 10. show a QR code and two inputs click "exportar clave privada" 
+ 11. ![image](https://user-images.githubusercontent.com/47333561/175657436-fe47e412-8013-42e3-9770-c7a8d76490a5.png)
+ 12. Then you just need to put your password and click "confirmar"
+ 13. ![image](https://user-images.githubusercontent.com/47333561/175657591-631bdee9-5f0c-4f08-ae0e-d950f125d060.png)
+ 14. And show us a red numbers that is the private account that mus go in accounts array.
+ 15. ![image](https://user-images.githubusercontent.com/47333561/175657798-a7e6bba6-9ae5-46be-892c-abe90e83e8b9.png)
+ 16. Now we need ropsten ethers so we need to go to [fouset ropsten](https://faucet.egorfine.com/) and put your wallet account with the ropsten network
+ 17. ![image](https://user-images.githubusercontent.com/47333561/175657939-0438ab7e-2836-4144-b602-f82378a083ec.png)
+ 18. then you just need run the same command to deploy the localnetwork but with ropsten instad localhost 
+ ``
+ yarn hardhat run scripts/deploy.js --network ropsten
+ ``
+ 19  This show you a small message and give you a address
+ 20. Go to [ropsten etherscan](https://ropsten.etherscan.io/) and put the number in the searchbox 
+ 21. Now you can see your smart contract in the ropsten ethereum network
+
+
+
+
+
+
