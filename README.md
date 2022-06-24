@@ -101,6 +101,9 @@ you just need your address contract
 when you run this command, you can use your local network, but you need to code like the variables like the previous step.
 ![deploytest](https://user-images.githubusercontent.com/47333561/174470648-170611f0-2bdc-44a8-8bfa-ffb25de375a1.png)
 
+#### .editor option 
+this is very helpful because we can now  write multi lines of  js code in the console and see our smart contracts work in local environment
+
 ## deploy to network 
 In this case we will use [infura](https://infura.io/)
 the first spet is create a count and create a proyect.
