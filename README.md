@@ -129,7 +129,7 @@ After you create your account and your project, you can see a dashboard like thi
  14. And show us a red numbers that is the private account that mus go in accounts array.
  15. ![image](https://user-images.githubusercontent.com/47333561/175657798-a7e6bba6-9ae5-46be-892c-abe90e83e8b9.png)
  16. Now we need ropsten ethers so we need to go to [fouset ropsten](https://faucet.egorfine.com/) and put your wallet account with the ropsten network
- 17. ![image](https://user-images.githubusercontent.com/47333561/175657939-0438ab7e-2836-4144-b602-f82378a083ec.png)
+ 17.![image](https://user-images.githubusercontent.com/47333561/175799955-21752546-561d-483f-b364-626393a9b628.png)
  18. then you just need run the same command to deploy the localnetwork but with ropsten instad localhost 
  ``
  yarn hardhat run scripts/deploy.js --network ropsten
