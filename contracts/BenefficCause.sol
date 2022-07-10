@@ -18,24 +18,19 @@ contract BenefficCause {
     } 
 
     function targetQuantity (string memory _name, uint _donation) private view returns(bool) {
-        bool isComplete = false;
         typeCause memory cause = causes[_name];
-
-        if(cause.object_price >= (cause.recover_quantity + _donation)) {
-            return isComplete = true;
+        if(cause.object_price <= (cause.recover_quantity + _donation)) {
+            return  false;
         }
-        return isComplete;
-
+        return true;
     }
 
     function donate (string memory _name, uint _quantity_money) public view returns (bool) {
-        bool acceptDonation = false;
         bool isTargetComplete = targetQuantity(_name, _quantity_money);
         if(!isTargetComplete){
-           return acceptDonation = true;
+           return true;
         }
-
-        return acceptDonation;
+        return false;
     }
 
     function completeCauseObjetive(string memory _name) public view returns(bool, uint){
