@@ -74,7 +74,7 @@ We have 20 accounts to test our apps and in the remote case you use all your eth
 ``
  yarn hardhat run <folder/fileToDeploy> --network <localhost or network-name>
 ``
-# basic use 
+# File deploy.js
 ``
  const hre = require("hardhat");
 ``
